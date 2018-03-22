@@ -1,0 +1,5 @@
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);/*去掉点击效果  安卓默认是篮筐   苹果默认是变灰*/
+    margin: 0;
+    padding: 0;
+}
