@@ -8,7 +8,7 @@ var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 module.exports = {
     devtool: 'eval-source-map',
     entry: {
-        YinYiTest: [__dirname + "/Public/H5/app/YinYiTest/YinYiTest.jsx"]
+        Default: [__dirname + "/Public/H5/app/Default/Default.jsx"]
     },
 
     output: {
@@ -26,7 +26,8 @@ module.exports = {
         contentBase: "./Public/H5/build",//本地服务器所加载的页面所在的目录
         historyApiFallback: true,//不跳转
         inline: true,//实时刷新
-        hot:true
+        hot:true,
+        port: '8089'
     },
 
     resolve: {
@@ -74,7 +75,7 @@ module.exports = {
         new webpack.BannerPlugin('版权所有，翻版必究'),
         // 打开浏览器
         new OpenBrowserPlugin({
-            url: 'http://localhost:8080/view/'
+            url: 'http://localhost:8089/view/'
         }),
         // 可在业务 js 代码中使用 __DEV__ 判断是否是dev模式（dev模式下可以提示错误、测试报告等, production模式不提示）
         new webpack.DefinePlugin({
@@ -87,9 +88,9 @@ module.exports = {
             inject: true,
             hash: true,
             title: "main",
-            filename: 'view/YinYiTest.html',
-            template: __dirname + "/Public/H5/app/YinYiTest/YinYiTest.tmpl.html", //new 一个这个插件的实例，并传入相关的参数
-            chunks: ['YinYiTest']
+            filename: 'view/Default.html',
+            template: __dirname + "/Public/H5/app/Default/Default.tmpl.html", //new 一个这个插件的实例，并传入相关的参数
+            chunks: ['Default']
         }),
     ]
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import {Router, Route, IndexRoute} from 'react-router'
 
 import App from '../containers/index'
-import Home from '../containers/Home/index';
+import Home from '../containers/Default/index';
 import NotPage from '../containers/404';
 
 class routerMap extends React.Component {

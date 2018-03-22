@@ -13,18 +13,6 @@ class Home extends React.Component {
         return(
             <div>
                 <p>this is Home Component</p>
-                <div>
-                    <Link to="/todolist">goto 《todolist》</Link>
-                </div>
-                <div>
-                    <Link to="/list">goto 《list》</Link>
-                </div>
-                <div>
-                    <Link to="/react_redux">goto 《react_redux_demo》</Link>
-                </div>
-                <div>
-                    <Link to="/city">goto 《city info》</Link>
-                </div>
             </div>
         )
     }
