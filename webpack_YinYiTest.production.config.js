@@ -10,7 +10,7 @@ var ROOT_PATH = path.resolve(path_node_root, '../');
 
 module.exports = {
     entry: {
-        Default: [ROOT_PATH + "/Public/H5/app/Default/Default.jsx"],
+        Default: [ROOT_PATH + "/Public/H5/app/Main/Main.jsx"],
         // 将 第三方依赖 单独打包
         vendor: [
             'react',
@@ -21,7 +21,7 @@ module.exports = {
         ]
     },
     output: {
-        path: ROOT_PATH + "/Public/H5/build/Default",//打包后的文件存放的地方
+        path: ROOT_PATH + "/Public/H5/build/Main",//打包后的文件存放的地方
         filename: "js/[name].js"//打包后输出文件的文件名
     },
     resolve: {
@@ -75,7 +75,7 @@ module.exports = {
                 loader: 'url-loader',
                 options:{
                     limit:3000,
-                    publicPath:'../',
+                    publicPath:'../images',
                     outputPath:"images/"
                 }
             },  // 限制大小1kb
@@ -88,8 +88,8 @@ module.exports = {
             inject: true,
             hash: true,
             title: "main",
-            filename: 'view/Default.html',
-            template: ROOT_PATH + "/Public/H5/app/Default/Default.tmpl.html", //new 一个这个插件的实例，并传入相关的参数
+            filename: 'view/Main.html',
+            template: ROOT_PATH + "/Public/H5/app/Main/Main.tmpl.html", //new 一个这个插件的实例，并传入相关的参数
             chunks: ['Default','vendor']
         }),
         // 定义为生产环境，编译 React 时压缩到最小

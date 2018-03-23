@@ -8,7 +8,7 @@ var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 module.exports = {
     devtool: 'eval-source-map',
     entry: {
-        Default: [__dirname + "/Public/H5/app/Default/Default.jsx"]
+        Default: [__dirname + "/Public/H5/app/Main/Main.jsx"]
     },
 
     output: {
@@ -64,7 +64,7 @@ module.exports = {
             {test: /\.(png|gif|jpg|jpeg|bmp)$/i, loader: 'url-loader?',
                 options:{
                     limit:1000,
-                    publicPath:'../',
+                    publicPath:'../images',
                     outputPath:"images/"
                 }
             },  // 限制大小5kb
@@ -88,8 +88,8 @@ module.exports = {
             inject: true,
             hash: true,
             title: "main",
-            filename: 'view/Default.html',
-            template: __dirname + "/Public/H5/app/Default/Default.tmpl.html", //new 一个这个插件的实例，并传入相关的参数
+            filename: 'view/Main.html',
+            template: __dirname + "/Public/H5/app/Main/Main.tmpl.html", //new 一个这个插件的实例，并传入相关的参数
             chunks: ['Default']
         }),
     ]
