@@ -8,8 +8,8 @@ import { hashHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore'
 
-// import TodoMain from './containers/TodoMain/index';
-// import Info from './component/Info/index'
+import './common'
+
 import RouterMap from './router/routerMap'
 
 let store = configureStore()
